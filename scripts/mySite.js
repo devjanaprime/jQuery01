@@ -4,7 +4,7 @@ var counter = 0;
 $(function ()
 {
    // after the "#" is the id of the object on which we can click
-   $('#clickMeToCalculate').click(function(){
+   $('#clickMeToCalculate').on( 'click', function(){
       if( $('#textIn').val() == '' ){
         $('#textIn').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
       }
@@ -20,19 +20,19 @@ $(function ()
       }
     });
 
-    $('#peekaboo').click(function(){
+    $('#peekaboo').on( 'click', function(){
      $('#outputText').fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
     });
 
-   $('#selectCapacity').change(function(){
+   $('#selectCapacity').on( 'change', function(){
       console.log( "selectCapacity: " + $('#selectCapacity').val());
     });
 
-   $('#selectFill').change(function(){
+   $('#selectFill').on( 'change', function(){
       console.log( "selectFill: " + $('#selectFill').val());
     });
 
-   $('#textIn').keyup(function(){
+   $('#textIn').on( 'keyup', function(){
      totalText = $('#textIn').val();
       console.log( "textIn: " + $('#textIn').val());
     });
